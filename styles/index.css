@@ -18,8 +18,21 @@ body {
   margin: 0 auto;
 }
 
-.flex-image-wrapper {
+/* * {border: 1px solid red;} */
+
+.flex-image-wrapper-center {
+  /* border: 1px solid cyan; */
   text-align: center;
+  flex-grow: 1;
+}
+.flex-image-wrapper-right {
+  /* border: 1px solid blue; */
+  text-align: right;
+  flex-grow: 1;
+}
+.flex-image-wrapper-left {
+  /* border: 1px solid green; */
+  text-align: left;
   flex-grow: 1;
 }
 
@@ -96,6 +109,7 @@ nav a {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 3vw;
 }
 
 .section-base .flex-image-wrapper > img {
