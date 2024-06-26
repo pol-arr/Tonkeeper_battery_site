@@ -23,7 +23,7 @@
   color: var(--textPrimary);
 
   /* for testing only */
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }
 
 /* Main title */
@@ -34,13 +34,13 @@ h1 {
 
 /*  secondary titles */
 h2 {
-  font-size: 4.375rem;
+  font-size: 40px;
   font-weight: bold;
 }
 
 /* Tertiary title */
 h3 {
-  font-size: 2.5rem;
+  font-size: 30px;
   font-weight: 600;
 }
 
@@ -53,8 +53,9 @@ h4 {
 
 /* Normal text */
 p {
-  font-size: 1.25rem;
+  font-size: 16px;
   font-weight: 500;
+  color: var(--textsecondary);
 }
 
 h4,
