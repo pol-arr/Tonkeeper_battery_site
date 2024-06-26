@@ -62,7 +62,7 @@ nav a {
 /* ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ */
 
 #landing-section {
-  height: calc(100vh - 80px);
+  height: calc(100vh - 10px);
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -121,7 +121,7 @@ nav a {
   gap: var(--secondaryGap);
   display: flex;
   flex-direction: column;
-  width: 700px;
+  width: 650px;
   max-width: 100%;
   justify-content: center;
 }
