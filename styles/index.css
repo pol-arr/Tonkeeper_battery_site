@@ -1,69 +1,73 @@
-/* Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Vollkorn+SC:wght@400;600;700;900&display=swap");
-
-:root {
-  /* Colors */
-  --backgroundPage: #10161f;
-  --backgroundContent: #1d2633;
-  --textPrimary: #ffffff;
-  --accentBlue: #45aef5;
-  --green: #5ef545;
-  --textsecondary: #8994a3;
-
-  /* padding */
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  text-decoration: 0;
-
-  /* Universal font styles */
-  font-family: "Inter", sans-serif;
-  line-height: 150%;
-  color: var(--textPrimary);
-}
-
-html {
-  font-size: 16px; /* Base font size */
-}
+@import url(presets.css);
 
 body {
   background-color: var(--backgroundPage);
 }
 
-/* Main title */
-h1 {
-  font-size: 9.375rem;
-  font-weight: bold;
+/* NAVIGATION */
+/* ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ */
+
+nav {
+  display: flex;
+  width: auto;
+  height: 80px;
+  align-items: center;
+  gap: 110px;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
-/*  secondary titles */
-h2 {
-  font-size: 4.375rem;
-  font-weight: bold;
+nav a {
+  color: var(--textPrimary);
+  font-size: 15px;
+  font-weight: 400;
 }
 
-/* Tertiary title */
-h3 {
-  font-size: 2.5rem;
-  font-weight: 600;
+/* HERO section */
+/* ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ */
+
+.landing-section {
+  /* height: calc(100vh - 80px); */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 5vw;
 }
 
-/* Writing in landing part */
-h4 {
-  font-size: 1.4375rem;
-  font-weight: 500;
+.ls-left {
+  width: fit-content;
 }
 
-/* Normal text */
-p {
-  font-size: 1.25rem;
-  font-weight: 500;
+#ls-image {
+  height: clamp(380px, 390px, 430px);
 }
 
-/* footer text */
-h5 {
-  font-size: 1.25rem;
-  color: var(--textsecondary);
+.title-logo {
+  position: relative;
 }
+
+.title-logo img {
+  height: clamp(45px, 50px, 55px);
+  position: absolute;
+  top: 0;
+}
+
+.landing-section h4 {
+  width: 600px;
+  margin-top: 5vh;
+}
+
+#scroll-indicator {
+  height: 18px;
+  position: absolute;
+  top: 93vh;
+}
+
+/* SECTION 1 */
+/* ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ */
