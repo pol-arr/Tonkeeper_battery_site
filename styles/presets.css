@@ -11,6 +11,12 @@
   --accentBlue: #45aef5;
   --green: #5ef545;
   --textsecondary: #8994a3;
+
+  /* Gap between main elements */
+  --mainGap: 120px;
+
+  /* For gaps between h2 and p */
+  --secondaryGap: 25px;
 }
 
 * {
@@ -23,7 +29,7 @@
   color: var(--textPrimary);
 
   /* for testing only */
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 /* Main title */
