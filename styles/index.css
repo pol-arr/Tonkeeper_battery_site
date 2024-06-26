@@ -1,7 +1,26 @@
 @import url(presets.css);
+@import url(animations.css);
 
 body {
   background-color: var(--backgroundPage);
+  overflow-x: hidden;
+}
+
+#content-wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#content-container {
+  width: 60vw;
+  margin: 0 auto;
+}
+
+.flex-image-wrapper {
+  text-align: center;
+  flex-grow: 1;
 }
 
 /* NAVIGATION */
@@ -29,18 +48,15 @@ nav a {
 /* HERO section */
 /* ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ */
 
-.landing-section {
-  /* height: calc(100vh - 80px); */
-  height: 100vh;
+#landing-section {
+  height: calc(100vh - 80px);
   width: 100%;
   display: flex;
-  justify-content: center;
-  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  gap: 5vw;
 }
 
-.ls-left {
+#landing-section .left {
   width: fit-content;
 }
 
@@ -48,59 +64,92 @@ nav a {
   height: clamp(380px, 390px, 430px);
 }
 
-.title-logo {
+#title-logo {
   position: relative;
 }
 
-.title-logo img {
+#title-logo img {
   height: clamp(45px, 50px, 55px);
   position: absolute;
   top: 0;
 }
 
-.landing-section h4 {
+#landing-section p {
   width: 600px;
-  margin-top: 5vh;
+  margin-top: 3vh;
 }
 
 #scroll-indicator {
   height: 18px;
   position: absolute;
-  top: 93vh;
+  bottom: 3vh;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scrollbounce 2s infinite;
+}
+
+/* COMMON SECTION STYLES */
+/* ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ */
+
+.section-base {
+  margin-top: var(--mainGap);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-base .flex-image-wrapper > img {
+  height: clamp(380px, 390px, 430px);
+}
+
+.section-content {
+  gap: var(--secondaryGap);
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  max-width: 100%;
+  justify-content: center;
+}
+
+.section-right {
+  text-align: right;
+}
+
+.section-right .flex-image-wrapper > img {
+  height: clamp(420px, 450px, 480px);
 }
 
 /* SECTION 1 */
 /* ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ */
 
-.section-1 {
-  display: flex;
+#s-the-basics {
   flex-direction: column;
-  gap: 100px;
-  margin-top: var(--mainGap);
-}
-.s1-top {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 600px;
-  margin-left: 15vw;
+  gap: 5vh;
 }
 
-.s1-bottom {
+#s-the-basics .top {
   display: flex;
-  gap: 5vw;
+  flex-direction: column;
+  gap: var(--secondaryGap);
+  width: 700px;
+  max-width: 100%;
+  align-self: start;
+}
+
+#s-the-basics #cards {
+  display: inline-flex;
   justify-content: center;
+  gap: 5vw;
 }
 
-.s1-bottom p {
+#s-the-basics #cards p {
   font-size: 14px;
 }
 
-/* content container */
-.right-container,
-.left-container {
+#s-the-basics .card {
   width: 260px;
   background-color: var(--backgroundContent);
+  border: 1px solid var(--borderPrimary);
   border-radius: 50px;
   padding: 40px;
   display: flex;
@@ -109,103 +158,39 @@ nav a {
   align-items: center;
 }
 
-.con-text {
+#s-the-basics .card .card-text {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-/* Section 2 */
-/* ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ */
-.section-2 {
-  margin-top: var(--mainGap);
-  text-align: right;
-  display: flex;
-  justify-content: center;
-  gap: 4vw;
-}
-
-.s2-right {
-  gap: var(--secondaryGap);
-  display: flex;
-  flex-direction: column;
-  width: 700px;
-  justify-content: center;
-}
-
-.section-2 img {
-  height: clamp(380px, 390px, 430px);
-}
-
-/* Section 3 */
+/* SECTION 5 */
 /* ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ */
 
-.section-3 {
-  margin-top: var(--mainGap);
-  display: flex;
-  justify-content: center;
-  gap: 4vw;
-}
-
-.s3-left {
-  gap: var(--secondaryGap);
-  display: flex;
-  flex-direction: column;
-  width: 700px;
-  justify-content: center;
-}
-
-.section-3 img {
-  height: clamp(380px, 390px, 430px);
-}
-
-/* Section 4 */
-/* ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ */
-
-.section-4 {
-  margin-top: var(--mainGap);
-  display: flex;
-  justify-content: center;
-  gap: 4vw;
-  text-align: right;
-}
-
-.s4-right {
-  gap: var(--secondaryGap);
-  display: flex;
-  flex-direction: column;
-  width: 600px;
-  justify-content: center;
-}
-
-.section-4 img {
-  height: clamp(420px, 450px, 480px);
-}
-
-/* Section 5 */
-/* ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ */
-
-.section-5 {
-  margin-top: var(--mainGap);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  align-items: center;
-  gap: 15px;
-  padding: 0 20vw;
+#start-using {
   text-align: center;
 }
 
-.section-5 img {
+#start-using .container {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+#start-using p {
+  width: 100%;
+}
+
+#start-using > img {
   flex: 0 0 auto;
-  height: auto;
   width: auto;
+  aspect-ratio: 1/1;
   max-width: 100%;
 }
 
 .download-apps {
-  display: flex;
   flex-direction: row;
   gap: 24px;
   padding-top: 15px;
@@ -215,9 +200,120 @@ nav a {
   height: 40px;
 }
 
-/* footer */
+/* FOOTER */
 /* ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ */
 
 footer {
   margin-top: var(--mainGap);
+  display: inline-flex;
+  width: 100%;
+  margin-bottom: 70px;
+}
+
+footer .img {
+  width: 20%;
+  display: flex;
+}
+footer .img > svg {
+  width: 100%;
+  margin: auto;
+}
+
+footer .text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+footer .text .links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  justify-content: space-evenly;
+}
+
+.directory {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.directory > p {
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: var(--textPrimary);
+}
+
+.directory > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-left: 0;
+}
+
+.directory > ul li a {
+  color: var(--textSecondary);
+}
+
+.directory > a {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.directory > a > img {
+  max-width: 100%;
+  height: auto;
+  max-height: 50px;
+}
+
+#copyright span,
+#copyright span a {
+  font-size: .85rem;
+  color: var(--textSecondary);
+}
+#copyright span a { font-weight: 500; }
+#copyright span a:hover { opacity: .75; }
+#copyright strong {
+  font-weight: 500;
+}
+#copyright p { font-size: .9rem; }
+
+/* GLOW EFFECT */
+/* ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ */
+
+.glow {
+  position: absolute;
+  z-index: -10;
+}
+
+.glow-1 {
+  top: -480px;
+  left: -100px;
+}
+
+.glow-2 {
+  top: 100px;
+  right: -480px;
+}
+
+.glow-3 {
+  top: 60vh;
+  left: -400px;
+}
+
+.glow-4 {
+  top: calc(100vh + 700px);
+  right: -500px;
+}
+
+.glow-5 {
+  top: calc(100vh + 1250px);
+  left: -500px;
+}
+
+.glow-6 {
+  top: calc(100vh + 1830px);
+  right: -500px;
 }
