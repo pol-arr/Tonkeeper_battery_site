@@ -13,7 +13,7 @@
   --textsecondary: #8994a3;
 
   /* Gap between main elements */
-  --mainGap: 120px;
+  --mainGap: 150px;
 
   /* For gaps between h2 and p */
   --secondaryGap: 25px;
@@ -24,7 +24,7 @@
   margin: 0;
   text-decoration: 0;
 
-  /* Universal font styles */
+  /* Universal font style */
   font-family: Inter, sans-serif;
   color: var(--textPrimary);
 

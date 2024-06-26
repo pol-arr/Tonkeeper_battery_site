@@ -133,6 +133,48 @@ nav a {
 }
 
 .section-2 img {
-  /* height: clamp(380px, 390px, 430px); */
-  height: 380px;
+  height: clamp(380px, 390px, 430px);
+}
+
+/* Section 3 */
+
+.section-3 {
+  margin-top: var(--mainGap);
+  display: flex;
+  justify-content: center;
+  gap: 4vw;
+}
+
+.s3-left {
+  gap: var(--secondaryGap);
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  justify-content: center;
+}
+
+.section-3 img {
+  height: clamp(380px, 390px, 430px);
+}
+
+/* Section 4 */
+
+.section-4 {
+  margin-top: var(--mainGap);
+  display: flex;
+  justify-content: center;
+  gap: 4vw;
+  text-align: right;
+}
+
+.s4-right {
+  gap: var(--secondaryGap);
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  justify-content: center;
+}
+
+.section-4 img {
+  height: clamp(420px, 450px, 480px);
 }
