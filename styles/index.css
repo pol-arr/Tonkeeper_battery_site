@@ -116,6 +116,7 @@ nav a {
 }
 
 /* Section 2 */
+/* ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ */
 .section-2 {
   margin-top: var(--mainGap);
   text-align: right;
@@ -137,6 +138,7 @@ nav a {
 }
 
 /* Section 3 */
+/* ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ */
 
 .section-3 {
   margin-top: var(--mainGap);
@@ -158,6 +160,7 @@ nav a {
 }
 
 /* Section 4 */
+/* ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ */
 
 .section-4 {
   margin-top: var(--mainGap);
@@ -177,4 +180,44 @@ nav a {
 
 .section-4 img {
   height: clamp(420px, 450px, 480px);
+}
+
+/* Section 5 */
+/* ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ */
+
+.section-5 {
+  margin-top: var(--mainGap);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-items: center;
+  gap: 15px;
+  padding: 0 20vw;
+  text-align: center;
+}
+
+.section-5 img {
+  flex: 0 0 auto;
+  height: auto;
+  width: auto;
+  max-width: 100%;
+}
+
+.download-apps {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  padding-top: 15px;
+}
+
+.download-apps img {
+  height: 40px;
+}
+
+/* footer */
+/* ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ */
+
+footer {
+  margin-top: var(--mainGap);
 }
