@@ -1,5 +1,6 @@
 @import url(presets.css);
 @import url(animations.css);
+@import url(scrollbar.css);
 
 body {
   background-color: var(--backgroundPage);
@@ -32,7 +33,9 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+  outline: 0;
 }
+
 #to-top:hover {
   opacity: .75;
 }
@@ -42,11 +45,13 @@ body {
   text-align: center;
   flex-grow: 1;
 }
+
 .flex-image-wrapper-right {
   /* border: 1px solid blue; */
   text-align: right;
   flex-grow: 1;
 }
+
 .flex-image-wrapper-left {
   /* border: 1px solid green; */
   text-align: left;
@@ -130,7 +135,7 @@ nav a {
   gap: 3vw;
 }
 
-.section-base .flex-image-wrapper > img {
+.section-base .flex-image-wrapper>img {
   height: clamp(380px, 390px, 430px);
 }
 
@@ -147,7 +152,7 @@ nav a {
   text-align: right;
 }
 
-.section-right .flex-image-wrapper > img {
+.section-right .flex-image-wrapper>img {
   height: clamp(420px, 450px, 480px);
 }
 
@@ -215,7 +220,7 @@ nav a {
   width: 100%;
 }
 
-#start-using > img {
+#start-using>img {
   flex: 0 0 auto;
   width: auto;
   aspect-ratio: 1/1;
@@ -246,7 +251,8 @@ footer .img {
   width: 20%;
   display: flex;
 }
-footer .img > svg {
+
+footer .img>svg {
   width: 100%;
   margin: auto;
 }
@@ -270,31 +276,31 @@ footer .text .links {
   flex-direction: column;
 }
 
-.directory > p {
+.directory>p {
   margin-bottom: 15px;
   font-weight: bold;
   color: var(--textPrimary);
 }
 
-.directory > ul {
+.directory>ul {
   display: flex;
   flex-direction: column;
   gap: 5px;
   padding-left: 0;
 }
 
-.directory > ul li a {
+.directory>ul li a {
   color: var(--textSecondary);
 }
 
-.directory > a {
-  display: flex; 
+.directory>a {
+  display: flex;
   align-items: center;
   justify-content: center;
   max-width: 100%;
 }
 
-.directory > a > img {
+.directory>a>img {
   max-width: 100%;
   height: auto;
   max-height: 50px;
@@ -305,12 +311,22 @@ footer .text .links {
   font-size: .85rem;
   color: var(--textSecondary);
 }
-#copyright span a { font-weight: 500; }
-#copyright span a:hover { opacity: .75; }
+
+#copyright span a {
+  font-weight: 500;
+}
+
+#copyright span a:hover {
+  opacity: .75;
+}
+
 #copyright strong {
   font-weight: 500;
 }
-#copyright p { font-size: .9rem; }
+
+#copyright p {
+  font-size: .9rem;
+}
 
 /* GLOW EFFECT */
 /* ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ */
