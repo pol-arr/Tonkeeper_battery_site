@@ -18,6 +18,24 @@ body {
   margin: 0 auto;
 }
 
+#to-top {
+  position: fixed;
+  bottom: 1vw;
+  right: 1vw;
+  aspect-ratio: 1/1;
+  width: 2.5vw;
+  background-color: var(--backgroundContent);
+  border: 1px solid var(--borderPrimary);
+  border-radius: 100px;
+  background-image: url(/assets/up-chevron.svg);
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+#to-top:hover {
+  opacity: .75;
+}
 
 .flex-image-wrapper-center {
   /* border: 1px solid cyan; */
