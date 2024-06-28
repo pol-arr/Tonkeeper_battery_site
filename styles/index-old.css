@@ -41,16 +41,19 @@ body {
 }
 
 .flex-image-wrapper-center {
+  /* border: 1px solid cyan; */
   text-align: center;
   flex-grow: 1;
 }
 
 .flex-image-wrapper-right {
+  /* border: 1px solid blue; */
   text-align: right;
   flex-grow: 1;
 }
 
 .flex-image-wrapper-left {
+  /* border: 1px solid green; */
   text-align: left;
   flex-grow: 1;
 }
@@ -90,8 +93,7 @@ nav a {
 }
 
 #landing-section .left {
-  word-wrap: break-word;
-  white-space: normal;
+  width: fit-content;
 }
 
 #ls-image {
@@ -167,7 +169,7 @@ nav a {
   display: flex;
   flex-direction: column;
   gap: var(--secondaryGap);
-  width: 90%;
+  width: 700px;
   max-width: 100%;
   align-self: start;
 }
@@ -176,7 +178,7 @@ nav a {
   display: flex;
   justify-content: center;
   gap: 5vw;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 #s-the-basics #cards p {
@@ -373,55 +375,6 @@ footer .text .links {
   animation: float 4s ease-in-out infinite;
 }
 
-
-@media (max-width: 1400px) {
-  #content-container {
-    width: 70vw;
-  }
-}
-
-@media (max-width: 1100px) {
-  #content-container {
-    width: 80vw;
-  }
-}
-
-@media (max-width: 960px) {
-  #content-container {
-    width: 90vw;
-  }
-}
-
-@media (max-width: 850px) {
-  #content-container {
-    width: 95vw;
-  }
-}
-
-@media (max-width: 800px) {
-  #content-container {
-    width: 80vw;
-  }
-  .section-base {
-    flex-wrap: wrap;
-  }
-
-  .section-base + .section-right {
-    flex-wrap: wrap-reverse;
-  }
-
-  .flex-image-wrapper-right {
-    text-align: center;
-  }
-  
-  .flex-image-wrapper-left {
-    text-align: center;
-  }
-
-  .section-base > .flex-image-wrapper-left > img[src="/assets/nft.png"] {
-    width: 70%;
-  }
-}
 
 
 /* @media (max-width: 1020px) {
