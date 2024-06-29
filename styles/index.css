@@ -93,6 +93,7 @@ nav {
 
 .hidden_menu {
   position: absolute;
+  display: none;
   overflow: hidden;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -484,6 +485,7 @@ footer .text .links {
 @media (max-width: 800px) {
   #content-container {
     width: 80vw;
+    margin: 0 auto;
   }
   .section-base {
     flex-wrap: wrap;

@@ -151,12 +151,14 @@
 /* Navigation animation */
 .nav-options.show {
   display: flex;
-  opacity: 1;
+  visibility: visible;
+  /* opacity: 1; */
   transform: translateY(0);
 }
 
 .nav-options.hide {
-  display: flex;
-  opacity: 0;
+  display: none;
+  visibility: hidden;
+  /* opacity: 0; */
   transform: translateY(-20px);
 }
