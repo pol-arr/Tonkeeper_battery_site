@@ -21,11 +21,17 @@ cards.forEach((item) => {
   });
 });
 
-function toggleNav() {
+document.addEventListener("DOMContentLoaded", function () {
+  var checkbox = document.getElementById("checkbox");
   var options = document.getElementsByClassName("nav-options")[0];
-  if (options.style.display === "none") {
-    options.style.display = "flex";
-  } else {
-    options.style.display = "none";
-  }
-}
+
+  checkbox.addEventListener("change", function () {
+    if (checkbox.checked) {
+      options.style.display = "flex";
+    } else {
+      options.style.display = "none";
+    }
+  });
+
+  options.style.display = "none";
+});
