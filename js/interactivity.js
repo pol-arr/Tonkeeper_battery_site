@@ -21,17 +21,37 @@ cards.forEach((item) => {
   });
 });
 
+// mobile navigation
+
 document.addEventListener("DOMContentLoaded", function () {
   var checkbox = document.getElementById("checkbox");
   var options = document.getElementsByClassName("nav-options")[0];
 
+  function resize() {
+    if (window.innerWidth > 800) {
+      options.style.display = "flex";
+      options.classList.remove("show", "hide");
+      checkbox.checked = false;
+    } else {
+      if (checkbox.checked) {
+        options.classList.remove("show", "hide");
+        options.style.display = "flex";
+      } else {
+        options.style.display = "none";
+      }
+    }
+  }
+
   checkbox.addEventListener("change", function () {
     if (checkbox.checked) {
       options.style.display = "flex";
+      options.classList.add("show");
+      options.classList.remove("hide");
     } else {
-      options.style.display = "none";
+      options.classList.add("hide");
+      options.classList.remove("show");
     }
   });
 
-  options.style.display = "none";
+  window.addEventListener("resize", resize);
 });
