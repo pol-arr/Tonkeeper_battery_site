@@ -4,7 +4,6 @@
 
 body {
   background-color: var(--backgroundPage);
-  overflow-x: hidden;
 }
 
 #content-wrapper {
@@ -12,6 +11,7 @@ body {
   height: auto;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 #content-container {
@@ -20,11 +20,12 @@ body {
 }
 
 #to-top {
+  user-select: none;
   position: fixed;
-  bottom: 1vw;
-  right: 1vw;
+  bottom: 1vh;
+  right: 1vh;
   aspect-ratio: 1/1;
-  width: 2.5vw;
+  width: 4vh;
   background-color: var(--backgroundContent);
   border: 1px solid var(--borderPrimary);
   border-radius: 100px;
@@ -37,7 +38,7 @@ body {
 }
 
 #to-top:hover {
-  opacity: 0.75;
+ filter: brightness(75%);
 }
 
 .flex-image-wrapper-center {
@@ -89,6 +90,7 @@ nav {
 
 .hamburger-menu {
   display: none;
+  user-select: none;
 }
 
 .hidden_menu {
@@ -139,23 +141,23 @@ nav {
 }
 
 /* HAMBURGER  */
-.checkbox:checked + label > .lines > .bar1 {
+.checkbox:checked+label>.lines>.bar1 {
   transform: rotate(45deg);
   transform-origin: 5%;
   width: 41px;
 }
 
-.checkbox:checked + label > .lines > .bar2 {
+.checkbox:checked+label>.lines>.bar2 {
   transform: translateX(-40px);
   background-color: transparent;
 }
 
-.checkbox:checked + label > .lines > .bar3 {
+.checkbox:checked+label>.lines>.bar3 {
   transform: translateX(40px);
   background-color: transparent;
 }
 
-.checkbox:checked + label > .lines > .bar4 {
+.checkbox:checked+label>.lines>.bar4 {
   transform-origin: 5%;
   transform: rotate(-45deg);
   width: 41px;
@@ -167,18 +169,25 @@ nav {
 #landing-section {
   height: calc(100vh - 10px);
   width: 100%;
+  gap: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  user-select: none;
+  padding: 0 2rem;
+  box-sizing: border-box;
 }
 
 #landing-section .left {
   word-wrap: break-word;
   white-space: normal;
+  max-width: 100%;
 }
 
 #ls-image {
-  height: clamp(380px, 390px, 430px);
+  height: clamp(300px, 35vw, 430px);
+  max-width: 100%;
+  object-fit: contain;
 }
 
 #title-logo {
@@ -192,9 +201,10 @@ nav {
 }
 
 #landing-section p {
-  width: 650px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 650px;
   margin-top: 3vh;
+  user-select: all;
 }
 
 #scroll-indicator {
@@ -204,6 +214,31 @@ nav {
   left: 50%;
   transform: translateX(-50%);
   animation: scrollbounce 2s infinite;
+}
+
+#greeting {
+  /* border: 1px solid red; */
+  /* position: relative; */
+  /* line-height: 100%; */
+  line-height: clamp(3.75rem, 5.5vw, 6.3rem);
+}
+
+#greeting>span:first-of-type {
+  /* border: 1px solid cyan; */
+  position: relative;
+  /* top: 10px; */
+  /* line-height: -100%; */
+  font-size: 5.75rem;
+  font-size: clamp(4.25rem, 5vw, 5.75rem);
+}
+
+#greeting span.green-text {
+  /* border: 1px solid greenyellow; */
+  position: relative;
+  /* top: -10px; */
+  /* line-height: 0; */
+  font-size: 9rem;
+  font-size: clamp(5.25rem, 8vw, 9rem)
 }
 
 /* COMMON SECTION STYLES */
@@ -217,7 +252,7 @@ nav {
   gap: 3vw;
 }
 
-.section-base .flex-image-wrapper > img {
+.section-base .flex-image-wrapper>img {
   height: clamp(380px, 390px, 430px);
 }
 
@@ -234,7 +269,7 @@ nav {
   text-align: right;
 }
 
-.section-right .flex-image-wrapper > img {
+.section-right .flex-image-wrapper>img {
   height: clamp(420px, 450px, 480px);
 }
 
@@ -305,7 +340,7 @@ nav {
   width: 100%;
 }
 
-#start-using > img {
+#start-using>img {
   flex: 0 0 auto;
   width: auto;
   aspect-ratio: 1/1;
@@ -337,7 +372,7 @@ footer .img {
   display: flex;
 }
 
-footer .img > svg {
+footer .img>svg {
   width: 100%;
   margin: auto;
 }
@@ -361,31 +396,31 @@ footer .text .links {
   flex-direction: column;
 }
 
-.directory > p {
+.directory>p {
   margin-bottom: 15px;
   font-weight: bold;
   color: var(--textPrimary);
 }
 
-.directory > ul {
+.directory>ul {
   display: flex;
   flex-direction: column;
   gap: 5px;
   padding-left: 0;
 }
 
-.directory > ul li a {
+.directory>ul li a {
   color: var(--textSecondary);
 }
 
-.directory > a {
+.directory>a {
   display: flex;
   align-items: center;
   justify-content: center;
   max-width: 100%;
 }
 
-.directory > a > img {
+.directory>a>img {
   max-width: 100%;
   height: auto;
   max-height: 50px;
@@ -481,29 +516,97 @@ footer .text .links {
     width: 95vw;
   }
 }
-
 @media (max-width: 800px) {
-  #content-container {
-    width: 80vw;
-    margin: 0 auto;
-  }
-  .section-base {
-    flex-wrap: wrap;
-  }
-
-  .section-base + .section-right {
-    flex-wrap: wrap-reverse;
-  }
-
-  .flex-image-wrapper-right {
+  #landing-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    /* border: 1px solid cyan; */
   }
 
+  .flex-image-wrapper-right img,
+  .flex-image-wrapper-left img {
+    width: 75%;
+  }
+  .flex-image-wrapper-right,
   .flex-image-wrapper-left {
     text-align: center;
   }
 
-  .section-base > .flex-image-wrapper-left > img[src="/assets/nft.png"] {
+  .section-base {
+    gap: 7vw;
+  }
+
+  #landing-section > .flex-image-wrapper-right.floating-animation {
+    flex-grow: 0;
+  }
+  #landing-section > .flex-image-wrapper-right.floating-animation img {
+    width: unset;
+  }
+
+  #title-logo img {
+    height: 40px;
+  }
+
+  #landing-section p {
+    width: 100%;
+  }
+
+  footer .img,
+  footer .img>svg {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  #content-container {
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  #title-logo img {
+    display: none;
+  }
+
+  .flex-image-wrapper-right img,
+  .flex-image-wrapper-left img {
+    width: 60%;
+  }
+
+  #landing-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: calc(100svh - 125px);
+  }
+
+  #landing-section > .flex-image-wrapper-right.floating-animation {
+    flex-grow: 0;
+  }
+
+  #title-logo img {
+    height: 40px;
+  }
+
+  #landing-section p {
+    width: 100%;
+  }
+
+  .section-base {
+    flex-wrap: wrap;
+  }
+
+  .section-base, .section-right {
+    text-align: left;
+  }
+
+  .section-base+.section-right {
+    flex-wrap: wrap-reverse;
+  }
+
+  .section-base>.flex-image-wrapper-left>img[src="/assets/nft.png"] {
     width: 70%;
   }
 
