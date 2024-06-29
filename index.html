@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tonkeeper Battery 🔋</title>
+    <title>Tonkeeper Battery</title>
     <link rel="stylesheet" href="./styles/index.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
   </head>
@@ -21,11 +21,34 @@
       <img class="glow glow-6" src="/assets/glow.png" alt="glow" />
       <div id="content-container">
         <nav>
-          <a href="https://tonkeeper.helpscoutdocs.com/">FAQ</a>
-          <a href="https://t.me/help_tonkeeper_bot">Support</a>
-          <a href="https://github.com/tonkeeper/wallet-api">Documentation</a>
-          <a href="https://t.me/help_tonkeeper_bot">Bug Bounty</a>
-          <a href="https://github.com/tonkeeper">GitHub</a>
+          <!-- Hamburger_menu -->
+          <div class="hamburger-menu" onclick="toggleNav()">
+            <input type="checkbox" id="checkbox" class="checkbox hidden_menu" />
+            <label for="checkbox">
+              <div class="hamburger lines">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+                <span class="bar bar3"></span>
+                <span class="bar bar4"></span>
+              </div>
+            </label>
+          </div>
+          <!-- links -->
+          <div class="nav-options">
+            <a target="_blank" href="https://tonkeeper.helpscoutdocs.com/"
+              >FAQ</a
+            >
+            <a target="_blank" href="https://t.me/help_tonkeeper_bot"
+              >Support</a
+            >
+            <a target="_blank" href="https://github.com/tonkeeper/wallet-api"
+              >Documentation</a
+            >
+            <a target="_blank" href="https://t.me/help_tonkeeper_bot"
+              >Bug Bounty</a
+            >
+            <a target="_blank" href="https://github.com/tonkeeper">GitHub</a>
+          </div>
         </nav>
         <section id="landing-section">
           <div class="left">

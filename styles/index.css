@@ -63,19 +63,101 @@ nav {
   width: auto;
   height: 80px;
   align-items: center;
-  gap: 110px;
   justify-content: center;
-  position: absolute;
   top: 0;
   left: 0;
   right: 0;
+  position: absolute;
 }
 
-nav a {
+.nav-options {
+  display: flex;
+  width: auto;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+}
+
+.nav-options a {
   color: var(--textPrimary);
   font-size: 15px;
   font-weight: 400;
-  opacity: .75;
+  opacity: 0.75;
+}
+
+/* Mobile navigation */
+
+.hamburger-menu {
+  display: none;
+}
+
+.hidden_menu {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.hamburger {
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+.hamburger .bar {
+  padding: 0;
+  width: 30px;
+  height: 4px;
+  background-color: #ffffff;
+  display: block;
+  border-radius: 4px;
+  transition: all 0.4s ease-in-out;
+  position: absolute;
+}
+
+.bar1 {
+  top: 0;
+}
+
+.bar2,
+.bar3 {
+  top: 13.5px;
+}
+
+.bar3 {
+  right: 0;
+}
+
+.bar4 {
+  bottom: 0;
+}
+
+/* HAMBURGER  */
+.checkbox:checked + label > .lines > .bar1 {
+  transform: rotate(45deg);
+  transform-origin: 5%;
+  width: 41px;
+}
+
+.checkbox:checked + label > .lines > .bar2 {
+  transform: translateX(-40px);
+  background-color: transparent;
+}
+
+.checkbox:checked + label > .lines > .bar3 {
+  transform: translateX(40px);
+  background-color: transparent;
+}
+
+.checkbox:checked + label > .lines > .bar4 {
+  transform-origin: 5%;
+  transform: rotate(-45deg);
+  width: 41px;
 }
 
 /* HERO section */
@@ -134,7 +216,7 @@ nav a {
   gap: 3vw;
 }
 
-.section-base .flex-image-wrapper>img {
+.section-base .flex-image-wrapper > img {
   height: clamp(380px, 390px, 430px);
 }
 
@@ -151,7 +233,7 @@ nav a {
   text-align: right;
 }
 
-.section-right .flex-image-wrapper>img {
+.section-right .flex-image-wrapper > img {
   height: clamp(420px, 450px, 480px);
 }
 
@@ -222,7 +304,7 @@ nav a {
   width: 100%;
 }
 
-#start-using>img {
+#start-using > img {
   flex: 0 0 auto;
   width: auto;
   aspect-ratio: 1/1;
@@ -254,7 +336,7 @@ footer .img {
   display: flex;
 }
 
-footer .img>svg {
+footer .img > svg {
   width: 100%;
   margin: auto;
 }
@@ -278,31 +360,31 @@ footer .text .links {
   flex-direction: column;
 }
 
-.directory>p {
+.directory > p {
   margin-bottom: 15px;
   font-weight: bold;
   color: var(--textPrimary);
 }
 
-.directory>ul {
+.directory > ul {
   display: flex;
   flex-direction: column;
   gap: 5px;
   padding-left: 0;
 }
 
-.directory>ul li a {
+.directory > ul li a {
   color: var(--textSecondary);
 }
 
-.directory>a {
+.directory > a {
   display: flex;
   align-items: center;
   justify-content: center;
   max-width: 100%;
 }
 
-.directory>a>img {
+.directory > a > img {
   max-width: 100%;
   height: auto;
   max-height: 50px;
@@ -373,6 +455,7 @@ footer .text .links {
   animation: float 4s ease-in-out infinite;
 }
 
+/* Responsive sizes */
 
 @media (max-width: 1400px) {
   #content-container {
@@ -413,7 +496,7 @@ footer .text .links {
   .flex-image-wrapper-right {
     text-align: center;
   }
-  
+
   .flex-image-wrapper-left {
     text-align: center;
   }
@@ -421,8 +504,32 @@ footer .text .links {
   .section-base > .flex-image-wrapper-left > img[src="/assets/nft.png"] {
     width: 70%;
   }
-}
 
+  /* Mobile Navigation */
+  nav {
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: start;
+    gap: 30px;
+    position: relative;
+  }
+
+  .hamburger-menu {
+    display: block;
+    margin-top: 35px;
+  }
+
+  .nav-options {
+    display: none;
+    z-index: 10;
+    flex-direction: column;
+    background-color: var(--backgroundContent);
+    width: auto;
+    border-radius: 16px;
+    padding: 25px 20px;
+    gap: 25px;
+  }
+}
 
 /* @media (max-width: 1020px) {
   #s-the-basics .card {
