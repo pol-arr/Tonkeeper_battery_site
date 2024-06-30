@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var options = document.getElementsByClassName("nav-options")[0];
 
   function resize() {
-    if (window.innerWidth > 700) {
+    if (window.innerWidth > 800) {
       options.style.display = "flex";
       options.classList.remove("show", "hide");
       checkbox.checked = false;
