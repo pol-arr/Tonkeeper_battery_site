@@ -28,7 +28,8 @@ html {
 * {
   padding: 0;
   margin: 0;
-  text-decoration: 0;
+  -webkit-text-decoration: 0;
+          text-decoration: 0;
 
   /* Universal font style */
   font-family: Inter, sans-serif;
